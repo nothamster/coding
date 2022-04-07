@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+int main(){
+	string s;
+	while(getline(cin, s)){
+		for(int i=0;i<s.length();i++){
+			cout<<char(s[i]-7);
+		}
+		cout<<endl;
+	}
+
+
+
+	return 0;
+}
+-------------------------------------------------------------------------------------------------------------------
+a009f
+#include <iostream>
+using namespace std;
+int main(){
+	string s="hello";
+	cout<<s<<endl;
+	cout<<s[0]<<endl;
+	cout<<s[0]+2<<endl;
+	cout<<char(s[0]+2)<<endl;
+
+
+
+	return 0;
+}
