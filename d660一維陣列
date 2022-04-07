@@ -1,0 +1,31 @@
+//d660
+#include<iostream>
+using namespace std;
+
+int main(){
+	int T;
+	int wall[50];
+	while(cin>>T){
+		for(int c=1;c<=T;c++){   //T組測資 
+			int N;
+			cin>>N;
+			for (int i=0;i<N;i++){     //輸入N道牆的高度儲存到wall[] 
+				cin>>wall[i];	
+			}
+			int H=0,L=0;
+			for(int i=0;i<N-1;i++){
+				if(wall[i]<wall[i+1]){
+					H++;		
+				}
+				else if(wall[i]>wall[i+1]){
+					L++;
+				}
+			}
+			cout<<"Case "<<c<<": "<<H<<" "<<L<<endl;
+		}
+		
+	}
+	
+	
+	return 0;
+}
