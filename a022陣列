@@ -1,0 +1,20 @@
+#include<iostream>
+using namespace std;
+int main() {
+	string A;
+	while(cin>>A){
+		string B = "";
+		int i;
+		for(int i=A.length()-1;i>=0;i--){
+			//B[i]=A[A.length()-i];
+			B.append(1,A[i]);
+			}
+		if(B==A){
+			cout<<"yes"<<endl;
+			}
+		else{
+			cout<<"no"<<endl;
+			}
+		
+		}
+	}
