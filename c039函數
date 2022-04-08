@@ -1,0 +1,45 @@
+#include<iostream>
+using namespace std;
+
+int cl(int);
+
+
+int main (){
+	int i,j;
+	while (cin>>i>>j){
+		if(i<=j){//情況1:i<=j 
+			int max_cl=-1;//不存在 ,容易被取代 
+			for(int n=i;n<=j;n++){
+				if(cl(n) >max_cl){
+					max_cl=cl(n);//取代 
+				}
+				
+			}
+			cout<<i<<" "<<j<<" "<<max_cl<<endl;
+		}
+		else if(j<i){//情況2:i>j 
+			int max_cl=-1;//不存在 ,容易被取代 
+			for(int n=j;n<=i;n++){
+				if(cl(n) >max_cl){
+					max_cl=cl(n);//取代 
+				}
+				
+			}
+			cout<<i<<" "<<j<<" "<<max_cl<<endl;
+		}
+	}
+}
+
+int cl(int n){//透過這個函數計算n的cycle-length
+	int length =1;
+	while(n!=1){
+		if(n%2==1){
+			n=n*3+1;
+		}
+		else{
+			n=n/2;
+		}
+		length ++;
+	}
+	return length;
+}
